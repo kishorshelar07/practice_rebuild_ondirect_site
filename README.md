@@ -416,4 +416,3 @@ Kharadi, Pune, Maharashtra 411014
 
 ---
 
-*Built with ❤️ — React 18 · Framer Motion · Tailwind CSS · Node.js · Express · MongoDB*
