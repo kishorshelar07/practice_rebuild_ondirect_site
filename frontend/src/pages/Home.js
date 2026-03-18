@@ -1,16 +1,14 @@
-/* eslint-disable */
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
-  ArrowRight, Target, Database, TrendingUp, Globe,
+  ArrowRight, Target, TrendingUp, Globe,
   Users, Zap, Award, BarChart3, ChevronRight
 } from 'lucide-react';
-import { pageTransition, heroTextReveal } from '../animations/variants';
-import { SectionHeader, ServiceCard, TestimonialCard, CTABanner } from '../components/sections/SectionComponents';
-
+import { pageTransition, fadeUp, staggerContainer, heroTextReveal } from '../animations/variants';
+import { SectionHeader, StatCard, ServiceCard, TestimonialCard, CTABanner } from '../components/sections/SectionComponents';
 // ── Hero ──────────────────────────────────────────────────────────────────────
 const HeroSection = () => {
   const ref = useRef(null);
