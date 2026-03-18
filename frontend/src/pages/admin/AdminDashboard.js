@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import { LogOut, Mail, Phone, Building2, MessageSquare, RefreshCw, Users, Clock } from 'lucide-react';
+import { LogOut, Mail, RefreshCw, Users, Clock } from 'lucide-react';
 import api from '../../services/api';
 
 const AdminDashboard = () => {
@@ -26,7 +26,7 @@ const AdminDashboard = () => {
     }
   };
 
-  useEffect(() => { fetchLeads(); }, []);
+  useEffect(() => { fetchLeads(); }, [fetchLeads]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const logout = () => {
     localStorage.removeItem('od_admin_token');
