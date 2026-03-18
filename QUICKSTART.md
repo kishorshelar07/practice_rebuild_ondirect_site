@@ -80,4 +80,4 @@ cd frontend && rm -rf node_modules && npm install && npm start
 
 **Admin credentials:**
 - Email: `admin@ondirect.in`
-- Password: `OnDirect@2024!`
+- Password: 

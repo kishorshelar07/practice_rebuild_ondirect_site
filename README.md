@@ -110,8 +110,6 @@ cp .env.example .env
 
 # 3. Create admin user
 node scripts/seed.js
-# Output: ✅  Admin created: admin@ondirect.in
-# Default password: OnDirect@2024!  (change in .env before running)
 
 # 4. Start dev server
 npm run dev
