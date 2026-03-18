@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { Users, Calendar, Target, BarChart3, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Users, Target, BarChart3, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import { pageTransition } from '../animations/variants';
 import { PageHero, CTABanner } from '../components/sections/SectionComponents';
 

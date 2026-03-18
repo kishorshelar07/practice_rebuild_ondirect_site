@@ -1,12 +1,12 @@
 /* eslint-disable */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import {
-  Lightbulb, Scale, Trophy, Users, Mail, FileText,
-  Headphones, Calendar, Database, ArrowRight, CheckCircle
+  Lightbulb, Scale, Trophy, Users, FileText,
+  Headphones, ArrowRight
 } from 'lucide-react';
 import { pageTransition } from '../animations/variants';
 import { PageHero, CTABanner } from '../components/sections/SectionComponents';
