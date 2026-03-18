@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ─────────────────────────────────────── */
+:root {
+  /* Deep navy-black backgrounds — rich & professional */
+  --dark-950:   #080B14;   /* deepest bg */
+  --dark-900:   #0D1120;   /* main bg */
+  --dark-800:   #111827;   /* section bg */
+  --dark-700:   #1A2235;   /* card bg */
+  --dark-600:   #1F2A40;   /* lighter card */
+  --dark-500:   #263248;   /* border bg */
+
+  /* Brand red */
+  --red-pri:    #EF4444;
+  --red-deep:   #DC2626;
+  --red-light:  #F87171;
+  --red-glow:   #B91C1C;
+
+  /* Accents */
+  --amber:      #F59E0B;
+  --white:      #FFFFFF;
+  --off-white:  #F8FAFC;
+}
+
+/* ── Reset ─────────────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--dark-950);
+  color: var(--off-white);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--dark-900); }
+::-webkit-scrollbar-thumb  { background: var(--red-pri); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--red-light); }
+
+/* ── Selection ─────────────────────────────────────────── */
+::selection {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fff;
+}
+
+/* ── Gradient Text ─────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #EF4444, #F87171, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-red {
+  background: linear-gradient(135deg, #EF4444, #F97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glass Effect ──────────────────────────────────────── */
+.glass {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.glass:hover {
+  border-color: rgba(239, 68, 68, 0.18);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+              0 0 20px rgba(239, 68, 68, 0.06),
+              inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── Glow Effects ──────────────────────────────────────── */
+.glow-red {
+  box-shadow: 0 0 40px rgba(239, 68, 68, 0.25),
+              0 0 80px rgba(239, 68, 68, 0.08);
+}
+
+.glow-red-sm {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.35);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 40px rgba(239, 68, 68, 0.6);
+}
+
+/* ── Grid Pattern Background ───────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Dot Pattern Background ────────────────────────────── */
+.dot-bg {
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Section Background Variants ───────────────────────── */
+.bg-section-1 { background-color: var(--dark-950); }
+.bg-section-2 { background-color: var(--dark-900); }
+.bg-section-3 { background-color: var(--dark-800); }
+
+/* Subtle top-light effect for section headers */
+.section-toplight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(239,68,68,0.3), transparent);
+}
+
+/* ── Gradient Border Card ──────────────────────────────── */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(var(--dark-700), var(--dark-700)) padding-box,
+              linear-gradient(135deg, rgba(239,68,68,0.5), rgba(248,113,113,0.2), rgba(251,191,36,0.3)) border-box;
+  border: 1px solid transparent;
+}
+
+/* ── Animated Underline ────────────────────────────────── */
+.animated-underline { position: relative; }
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #EF4444, #F87171);
+  transition: width 0.3s ease;
+}
+.animated-underline:hover::after { width: 100%; }
+
+/* ── Button Styles ─────────────────────────────────────── */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: white;
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 24px rgba(239, 68, 68, 0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(239, 68, 68, 0.5);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 12px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: rgba(239, 68, 68, 0.04);
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  border-color: #EF4444;
+  background: rgba(239, 68, 68, 0.1);
+  color: #fff;
+}
+
+/* ── Noise texture overlay ─────────────────────────────── */
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* ── Section padding ───────────────────────────────────── */
+.section-pad {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .section-pad { padding-top: 112px; padding-bottom: 112px; }
+}
+@media (min-width: 1024px) {
+  .section-pad { padding-top: 128px; padding-bottom: 128px; }
+}
+
+/* ── Container ─────────────────────────────────────────── */
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .container-custom { padding-left: 32px; padding-right: 32px; }
+}
+@media (min-width: 1024px) {
+  .container-custom { padding-left: 48px; padding-right: 48px; }
+}
+
+/* ── Red accent line ───────────────────────────────────── */
+.red-line {
+  display: inline-block;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #EF4444, #F87171);
+  margin-bottom: 16px;
+}
+
+/* ── Divider ───────────────────────────────────────────── */
+.red-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(239,68,68,0.25), transparent);
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+}
