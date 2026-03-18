@@ -8,8 +8,8 @@ import {
   ArrowRight, Target, Database, TrendingUp, Globe,
   Users, Zap, Award, BarChart3, ChevronRight
 } from 'lucide-react';
-import { pageTransition, fadeUp, staggerContainer, heroTextReveal } from '../animations/variants';
-import { SectionHeader, StatCard, ServiceCard, TestimonialCard, CTABanner } from '../components/sections/SectionComponents';
+import { pageTransition, heroTextReveal } from '../animations/variants';
+import { SectionHeader, ServiceCard, TestimonialCard, CTABanner } from '../components/sections/SectionComponents';
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
 const HeroSection = () => {

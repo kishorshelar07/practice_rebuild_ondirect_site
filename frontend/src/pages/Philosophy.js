@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
-import { Heart, Lightbulb, BookOpen, ChevronRight, TrendingUp, Star, Zap } from 'lucide-react';
+import { Heart, Lightbulb, BookOpen, ChevronRight, TrendingUp, Star } from 'lucide-react';
 import { pageTransition } from '../animations/variants';
 import { PageHero, CTABanner } from '../components/sections/SectionComponents';
 
